@@ -4,14 +4,24 @@ functions:
 pseudo2addr: 0x240BBD0
 get_scheduler: 0x2971760
 decode_scheduler_jobs: 0x2972290
-task_defer: 0xF3C360
 luavm_load: 0xBBE4A0
 luaL_register: 0x2413900
 arrays: 
 luaT_typenames: 0x37584C0
+luaT_eventname: 0x3758520
+offsets: 
+lua_State->global: 0x8
+lua_State->gt: 0x58
+global_State->totalbytes: 0x48
+global_State->memcatbytes: 0x2F0
+encryptions: 
+enc #1: get = sub val, ptr, set = add
+enc #2: get = xor; set = xor
 shuffles: 
 shuffle3(a0, a1, a2): a0 a1 a2
 shuffle5(a0, a1, a2, a3, a4): a4 a2 a1 a3 a0
+shuffle7(a0, a1, a2, a3, a4, a5, a6): a6 a3 a1 a4 a5 a0 a2
+shuffle8(a0, a1, a2, a3, a4, a5, a6, a7): a4 a3 a7 a2 a1 a0 a6 a5
 globals: 
 print: 0xE2D3D0
 tick: 0xE2E3C0
@@ -177,3 +187,10 @@ os_clock: 0x2462110
 os_date: 0x2466C40
 os_difftime: 0x24674D0
 os_time: 0x2467260
+task_synchronize: 0xF3AED0
+task_desynchronize: 0xF3B3B0
+task_defer: 0xF3C360
+task_spawn: 0xF3C660
+task_delay: 0xF3C860
+task_wait: 0xF3CBE0
+task_cancel: 0xF3CE40
