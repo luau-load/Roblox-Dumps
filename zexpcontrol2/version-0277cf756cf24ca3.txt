@@ -15,8 +15,8 @@ lua_State->gt: 0x58
 global_State->totalbytes: 0x48
 global_State->memcatbytes: 0x2F0
 encryptions: 
-enc #1: get = sub val, ptr, set = add
-enc #2: get = xor; set = xor
+lua_State->global enc: get = sub val, ptr, set = add
+Closure->cont enc: get = xor; set = xor
 shuffles: 
 shuffle3(a0, a1, a2): a0 a1 a2
 shuffle5(a0, a1, a2, a3, a4): a4 a2 a1 a3 a0
